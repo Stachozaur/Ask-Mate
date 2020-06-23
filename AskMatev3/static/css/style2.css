@@ -1,0 +1,231 @@
+
+body ,html{
+
+    background-image: url("../img/red-pill-blue-pill.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 20px;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+.content{
+    height: 600px;
+}
+
+#registration {
+    box-sizing: border-box;
+    height: 300px;
+    position: relative;
+    width: 400px;
+    /* Background pattern from Toptal Subtle Patterns */
+    background-image: url("../img/blue-pill.jpg");
+    padding: 50px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 150px;
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(33,179,184,1);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(33,179,184,1);
+    box-shadow: 3px 3px 30px 5px rgba(33,179,184,1);
+}
+
+
+
+input[type=text]
+{
+    width: 300px;
+    background: url('../img/blue-pill.jpg');
+    color: #666;
+    border:2px solid #dddddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 15px;
+    background-position-x: -51px;
+    background-position-y: -34px;
+}
+
+input[type=password]
+{
+    width: 300px;
+    background: url('../img/blue-pill.jpg');
+    color: #666;
+    border:2px solid #dddddd;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-top: 15px;
+    background-position-x: -51px;
+    background-position-y: -137px;
+}
+input[type=text]:focus,
+input[type=password]:focus {
+
+    box-shadow: 3px 3px 10px 2px rgba(33,58,184,0.9);
+    /*border: 2px solid springgreen ;*/
+    color: #428c42;
+}
+
+input[type=submit] {
+
+    margin-left: 75px;
+    width: 150px;
+    background-color: #36b03c;
+    color:#FFFFFF;
+    font-size: 15px;
+    padding: 15px 10px;
+    margin-top:20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    outline: none;
+}
+input[type=submit]:focus {
+
+    box-shadow: 3px 3px 15px 5px rgba(184,33,71,0.9);
+}
+input[type=submit]:hover {
+    background-color: #37b91a;
+}
+input::-webkit-input-placeholder {
+    color:springgreen;
+}
+input:focus::-webkit-input-placeholder {
+    color: #428c42;
+
+}
+
+
+.input-icons i {
+        margin-left: 10px;
+        position: absolute;
+        line-height:60px
+}
+
+.input-icons {
+    top:20px;
+    left: 50px;
+    position: absolute;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.input-icons-2 i {
+        margin-left: 10px;
+        position: absolute;
+        line-height:70px;
+}
+.input-icons-2 {
+    top: 120px;
+    left: 50px;
+    position: absolute;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.icon {
+    padding: 10px;
+    color: #24c412;
+    min-width: 100px;
+    text-align: left;
+}
+.input-field {
+    width: 10%;
+    padding: 10px;
+    text-align: center;
+}
+.log {
+    position: absolute;
+    top: 200px;
+}
+.footer {
+    position: absolute;
+    height: 50px;
+    text-align: center;
+    background-color: #222222;
+    color: #FFFFFF;
+    padding-top: 10px;
+    width: 100%;
+
+    font-size: 36px;
+}
+.login-choose{
+    background: #1ac6ff;
+    margin-left: 300px;
+    height: 400px;
+    background-position-y: 250px;
+    position: center;
+}
+.register-choose{
+    margin-left: 500px;
+    margin-bottom: 500px;
+    vertical-align: super;
+}
+
+.log_pass{
+    position: relative;
+}
+.log_pass #login {
+    position: absolute;
+    left: 220px;
+    top: 50px;
+    opacity: 0;
+
+}
+#password {
+    position: absolute;
+    left: 1130px;
+    top: 110px;
+    opacity: 0;
+}
+
+
+.nav-bar {
+    /*background-color: #ccb3ff;*/
+    background: url("https://www.epicentrofestival.com/wp-content/uploads/2020/01/epicentrofestival-desktop-wallpaper-sky-computer-pattern-light-blue-abstract-background-png-eockz6n8av-720x416.jpg");
+    text-align: center;
+}
+
+.nav-bar ul {
+    padding: 0;
+    list-style: none;
+
+}
+
+.nav-bar li {
+    display: inline;
+}
+
+.nav-bar form {
+    display: inline;
+    padding-left: 20px;
+}
+
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    padding-right: 15px;
+}
+
+.search_bar {
+    padding-top: 7px;
+    padding-left: 20px;
+    margin-left: 35px;
+}
+.search_button {
+    height: 35px;
+    width: 80px;
+    background-color: dodgerblue;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 8px;
+    border: none;
+    color: floralwhite;
+
+}
+
+.search_button:hover {
+    background-color: red;
+}

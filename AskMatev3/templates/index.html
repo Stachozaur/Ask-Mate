@@ -1,0 +1,69 @@
+{#{% extends 'layout.html' %}#}
+{% block header %}
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='arek.css') }}", media="all">
+    {% endblock %}
+    {% block content%}
+        <header class="main_header">
+            <div class="container">
+                {% if session %}
+
+                    Welcome, {{ session['user'] }}
+                {% else %}
+                    Welcome to AskMate!
+                {% endif %}
+            </div>
+        </header>
+
+            <nav class="nav-bar">
+                <div class="container">
+                <ul>
+                    <li><a href="{{ url_for('index') }}"> Home </a></li>
+                    <li><a href="{{ url_for('add_question') }}"> Add Question</a></li>
+                    <li><a href="{{ url_for('list_questions') }}"> Full Questions List </a></li>
+                            {% if session %}
+                                <li><a href="{{ url_for('logout', user=user) }}">Log out</a></li>
+                            {%  else %}
+                                <li><a href="{{ url_for('chosen_one') }}">User Panel</a></li>
+                            {% endif %}
+                    <li>
+                        <form action="{{ url_for('index') }}">
+                        <input class="search_bar" type="text" id="search_bar" name="search">
+                        <button class="search_button" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+
+        <div class="question_table">
+            <div class="container">
+                <table class="table">
+                    {% for key, value in titles.items() %}
+                        <th>{{ value }}<br>
+                            <form action="{{ url_for('sort_questions') }}" method="post">
+                            <input type="hidden" name="order_by" value="{{ key }}">
+                            <select onchange="this.form.submit()" id="order" name="order">
+                                <option value="" selected="selected">Sort by:</option>
+                                <option value="ASC">Ascending</option>
+                                <option value="DESC">Descending</option>
+                            </select>
+                        </form>
+                        </th>
+                    {% endfor %}
+                    {% for dictionary in questions %}
+                        <tr>
+                            {% for key, value in dictionary.items() %}
+                                {% if key != 'id' and key !='title' and key !='image' %}
+                                    <td>{{ dictionary.get(key) }}</td>
+                                {% elif key =='title' %}
+                                    <td><a href="{{ url_for('display_question', id = dictionary['id']) }}">{{ dictionary.get(key) }}</a></td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+    {% endblock %}

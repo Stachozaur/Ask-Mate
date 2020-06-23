@@ -1,0 +1,32 @@
+{% block header %}
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stachu.css') }}" media="all"/>
+
+{% endblock header %}
+{% block content %}
+    <body>
+    {% include 'layout.html' %}
+    {% if message %}
+        <p>{{ message }}</p>
+    {% endif %}
+
+        <form class="my-form" action="{{ url_for('add_question') }}" method="post">
+            <div class="form-group">
+                <label>TITLE</label>
+                <input type="text" id="Title" name="Title">
+            </div>
+            <div class="form-group">
+                <label>DESCRIPTION</label>
+                <textarea name="Message" id="Message"></textarea>
+            </div>
+            {% if not session %}
+            <input disabled class="button" type="image" src="/static/hajtox.png" alt="Submit" name="">
+            {% else %}
+            <input  class="button" type="image" src="/static/hajtox.png" alt="Submit" name="">
+            {% endif %}
+        </form>
+    </body>
+        <div class="foot">
+
+        </div>
+{% endblock content %}

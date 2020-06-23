@@ -1,0 +1,20 @@
+{% include 'layout.html' %}
+{% block title %}result{% endblock %}
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stachu.css') }}" media="all"/>
+
+{% endblock %}
+
+{% block content %}
+<body>
+<div class="comunicate">
+    {% if no_user %}
+         <p class="com">This login exist in database , please choose another</p>
+    {%  elif wrong_pass %}
+         <p class="com"> Your login or password is wrong , please log in again</p>
+    {% endif %}
+    <a href="{{ url_for('login')}}" id="baton"><input type="button" value="Try Again"></a>
+</div>
+</body>
+{% endblock %}
+
